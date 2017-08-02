@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "容器适配", "容器适配", "{4A97E03D-7E78-4672-9314-27DC9571EED8}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "$/优享生活/互动营销平台/SourceCode/TKW.IMP/容器适配"
+		SccAuxPath = ""
+		SccLocalPath = ".."
+		SccProvider = "MSSCCI:SourceGear Vault Professional Classic Client"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_9246"
+		Debug.AspNetCompiler.PhysicalPath = "容器适配\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9246\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_9246"
+		Release.AspNetCompiler.PhysicalPath = "容器适配\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_9246\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "9246"
+		SlnRelativePath = "容器适配\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ContainerModeling", "ContainerModeling\ContainerModeling.modelproj", "{FDCA3A5A-3761-42A9-8453-279E350638DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A97E03D-7E78-4672-9314-27DC9571EED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A97E03D-7E78-4672-9314-27DC9571EED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A97E03D-7E78-4672-9314-27DC9571EED8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A97E03D-7E78-4672-9314-27DC9571EED8}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FDCA3A5A-3761-42A9-8453-279E350638DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCA3A5A-3761-42A9-8453-279E350638DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCA3A5A-3761-42A9-8453-279E350638DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCA3A5A-3761-42A9-8453-279E350638DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 3
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccWebProject1 = true
+		SccProjectUniqueName1 = 容器适配
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = 容器适配\\
+		SccProjectEnlistmentChoice1 = 2
+		SccProjectUniqueName2 = ContainerModeling\\ContainerModeling.modelproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = ContainerModeling\\
+	EndGlobalSection
+EndGlobal

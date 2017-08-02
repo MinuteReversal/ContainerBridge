@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title></title>
+    <script src="../containerBridgeConfig.js"></script>
+    <script src="../containerBridge.all.js"></script>
+</head>
+<body>
+    <button>扫码</button>
+    <div></div>
+    <script>
+        var btnShare = document.querySelector("button");
+        var output = document.querySelector("div");
+
+        ContainerBridge.addEventListener(BridgeEventType.ready, function () {
+            onShare();
+        });
+
+        function onShare() {
+            alert("onShare");
+            rel.shareMenuItemsCustom({
+                //showMenuList根据自定义分享传递对应的参数,如果不传则不能分享
+                showMenuList: "weixinFriendApp",
+                success: function (res) {
+                    //location.href = "http://baidu.com";
+                    output.innerHTML += "分享回调<br/>";
+                    output.innerHTML += res.errMsg + "<br/>";
+                },
+                fail: function (res) {
+                    output.innerHTML += res.errMsg + "<br/>";
+                },
+                complete: function (res) {
+                    output.innerHTML += res.errMsg + "<br/>";
+                },
+                cancel: function (res) {
+                    output.innerHTML += res.errMsg + "<br/>";
+                }
+            });
+            //ContainerBridge.share({
+            //    //appFriend, appMoments, appWealthBar, weixinFriendApp, weixinMomentsApp, WeiboApp
+            //    showMenuList: "weixinFriendApp",
+            //    complete: function (message) {
+            //        location.href = "http://baidu.com";
+            //        output.innerHTML += "分享回调<br/>";
+            //        output.innerHTML += message + "<br/>";
+            //    }
+            //});
+        }
+
+        btnShare.addEventListener("click", function () {
+            alert("onScan");
+            rel.scanCode({
+                Needdeal: "0", //0 融e联不处理，1表示处理，默认为0
+                success: function (res) {
+                    alert(res.retMsg.result);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

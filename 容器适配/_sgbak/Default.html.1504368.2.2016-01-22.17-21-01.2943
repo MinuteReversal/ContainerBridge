@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>容器适配器</title>
+    <script src="ContainerBridgeConfig.js"></script>
+    <script src="containerbridge.min.js"></script>
+</head>
+<body>
+    <button id="Scan">扫描</button>
+    <script>
+        document.querySelector("#Scan").addEventListener("click", function (e) {
+            try {
+                ContainerBridge.Scan({
+                    completeFn: function (resultStr) {
+                        alert(resultStr);
+                    }
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
+</body>
+</html>

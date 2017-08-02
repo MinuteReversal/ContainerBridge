@@ -1,0 +1,1524 @@
+{
+    "project": {},
+    "files": {
+        "javascript\\Enumerable\\BridgeEnum.js": {
+            "name": "javascript\\Enumerable\\BridgeEnum.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Events\\BridgeEvents.js": {
+            "name": "javascript\\Events\\BridgeEvents.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Exceptions\\Exceptions.js": {
+            "name": "javascript\\Exceptions\\Exceptions.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\AjsBridge.js": {
+            "name": "javascript\\Implement\\AjsBridge.js",
+            "modules": {},
+            "classes": {
+                "AjsBridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\AlipayBridge.js": {
+            "name": "javascript\\Implement\\AlipayBridge.js",
+            "modules": {},
+            "classes": {
+                "AlipayBridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\AndroidBridge.js": {
+            "name": "javascript\\Implement\\AndroidBridge.js",
+            "modules": {},
+            "classes": {
+                "AndroidBridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\BridgeFactory.js": {
+            "name": "javascript\\Implement\\BridgeFactory.js",
+            "modules": {},
+            "classes": {
+                "BridgeFactory": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\BridgeLogger.js": {
+            "name": "javascript\\Implement\\BridgeLogger.js",
+            "modules": {},
+            "classes": {
+                "BridgeLogger": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\H5Bridge.js": {
+            "name": "javascript\\Implement\\H5Bridge.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\IosBridge.js": {
+            "name": "javascript\\Implement\\IosBridge.js",
+            "modules": {},
+            "classes": {
+                "IosBridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\ListenerItem.js": {
+            "name": "javascript\\Implement\\ListenerItem.js",
+            "modules": {},
+            "classes": {
+                "ListnerItem": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\MobileBridge.js": {
+            "name": "javascript\\Implement\\MobileBridge.js",
+            "modules": {},
+            "classes": {
+                "H5Bridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\RelBridge.js": {
+            "name": "javascript\\Implement\\RelBridge.js",
+            "modules": {},
+            "classes": {
+                "融e联": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Implement\\WechatBridge.js": {
+            "name": "javascript\\Implement\\WechatBridge.js",
+            "modules": {},
+            "classes": {
+                "WechatBridge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Interface\\IjsBridge.js": {
+            "name": "javascript\\Interface\\IjsBridge.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Options\\AjaxOptions.js": {
+            "name": "javascript\\Options\\AjaxOptions.js",
+            "modules": {},
+            "classes": {
+                "AjaxOptions": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Options\\AppOptions.js": {
+            "name": "javascript\\Options\\AppOptions.js",
+            "modules": {},
+            "classes": {
+                "AppOptions": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "javascript\\Options\\ScanOptions.js": {
+            "name": "javascript\\Options\\ScanOptions.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "AjsBridge": {
+            "name": "AjsBridge",
+            "shortname": "AjsBridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 8,
+            "abstract": "",
+            "is_constructor": 1
+        },
+        "AlipayBridge": {
+            "name": "AlipayBridge",
+            "shortname": "AlipayBridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\AlipayBridge.js",
+            "line": 6,
+            "extends": "AjsBridge",
+            "is_constructor": 1
+        },
+        "AndroidBridge": {
+            "name": "AndroidBridge",
+            "shortname": "AndroidBridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 6,
+            "extends": "AjsBridge",
+            "is_constructor": 1
+        },
+        "BridgeFactory": {
+            "name": "BridgeFactory",
+            "shortname": "BridgeFactory",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\BridgeFactory.js",
+            "line": 6
+        },
+        "BridgeLogger": {
+            "name": "BridgeLogger",
+            "shortname": "BridgeLogger",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\BridgeLogger.js",
+            "line": 1,
+            "description": "日志",
+            "is_constructor": 1
+        },
+        "H5Bridge": {
+            "name": "H5Bridge",
+            "shortname": "H5Bridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\MobileBridge.js",
+            "line": 6,
+            "extends": "AjsBridge",
+            "is_constructor": 1
+        },
+        "IosBridge": {
+            "name": "IosBridge",
+            "shortname": "IosBridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 6,
+            "extends": "AlipayBridge",
+            "is_constructor": 1
+        },
+        "ListnerItem": {
+            "name": "ListnerItem",
+            "shortname": "ListnerItem",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\ListenerItem.js",
+            "line": 1,
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                },
+                {
+                    "name": "listener",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "extends": "IjsBridge"
+        },
+        "融e联": {
+            "name": "融e联",
+            "shortname": "融e联",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 6,
+            "extends": "AjsBridge",
+            "is_constructor": 1
+        },
+        "WechatBridge": {
+            "name": "WechatBridge",
+            "shortname": "WechatBridge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 6,
+            "extends": "AjsBridge",
+            "is_constructor": 1
+        },
+        "AjaxOptions": {
+            "name": "AjaxOptions",
+            "shortname": "AjaxOptions",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Options\\AjaxOptions.js",
+            "line": 1,
+            "description": "Asynchronous Javascript And XML"
+        },
+        "AppOptions": {
+            "name": "AppOptions",
+            "shortname": "AppOptions",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "javascript\\Options\\AppOptions.js",
+            "line": 1,
+            "description": ":设置容器的appID和appSecret"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "javascript\\Enumerable\\BridgeEnum.js",
+            "line": 1,
+            "description": "容器类型",
+            "enum": "ContainerType",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Enumerable\\BridgeEnum.js",
+            "line": 7,
+            "description": "扫描类型",
+            "enum": "scanType",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Events\\BridgeEvents.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Events\\BridgeEvents.js",
+            "line": 6,
+            "enum": "BridgeEventType",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Events\\BridgeEvents.js",
+            "line": 10,
+            "itemtype": "event",
+            "name": "ready",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 6,
+            "description": "未实现",
+            "exception": "NotImplementException",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 17,
+            "description": "NotImplementException inherit Error",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 23,
+            "description": "不支持的异常",
+            "exception": "UnSupportedException",
+            "params": [
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 34,
+            "description": "UnSupportedException inherit Error",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 40,
+            "description": "参数异常",
+            "exception": "ArgumentException",
+            "params": [
+                {
+                    "name": "message",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Exceptions\\Exceptions.js",
+            "line": 51,
+            "description": "ArgumentException inherit Error",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122\ndocument:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 21,
+            "description": "AlipayBridge Implement IjsBridge",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 26,
+            "override": "",
+            "itemtype": "method",
+            "name": "extend",
+            "params": [
+                {
+                    "name": "object1,{Object}",
+                    "description": "object2,...",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Object"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 46,
+            "override": "",
+            "itemtype": "method",
+            "name": "addEventListener",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                },
+                {
+                    "name": "listener",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 58,
+            "override": "",
+            "itemtype": "method",
+            "name": "dispatchEvent",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 73,
+            "override": "",
+            "itemtype": "method",
+            "name": "removeEventListener",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                },
+                {
+                    "name": "listener",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 91,
+            "itemtype": "method",
+            "name": "Ajax",
+            "params": [
+                {
+                    "name": "ajaxOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 133,
+            "description": "扫码设置",
+            "itemtype": "property",
+            "name": "DefaultScanOptions",
+            "type": "Object",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 139,
+            "description": "扫码类型",
+            "itemtype": "attribute",
+            "name": "scanType",
+            "type": "scanType",
+            "default": "scanType.qrCode",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 146,
+            "itemtype": "attribute",
+            "name": "complete",
+            "type": "Function",
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AjsBridge.js",
+            "line": 155,
+            "description": "设置app",
+            "override": "",
+            "itemtype": "method",
+            "name": "setAppOptions",
+            "params": [
+                {
+                    "name": "UNKNOWN",
+                    "description": "",
+                    "type": "AppOptions"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjsBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AlipayBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "AlipayBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AlipayBridge.js",
+            "line": 26,
+            "description": "AlipayBridge inherit AjsBridge",
+            "class": "AlipayBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AlipayBridge.js",
+            "line": 31,
+            "description": "监测支付宝准备完成",
+            "itemtype": "method",
+            "name": "_listenAlipayReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AlipayBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AlipayBridge.js",
+            "line": 44,
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "throws": {
+                "description": "",
+                "type": "ArgumentException"
+            },
+            "class": "AlipayBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "AndroidBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 20,
+            "description": "AndroidBridge inherit AjsBridge",
+            "class": "AndroidBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 25,
+            "itemtype": "method",
+            "name": "_andriodReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AndroidBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 35,
+            "description": "设备回调",
+            "itemtype": "method",
+            "name": "getQRcodeResult",
+            "params": [
+                {
+                    "name": "result",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AndroidBridge"
+        },
+        {
+            "file": "javascript\\Implement\\AndroidBridge.js",
+            "line": 45,
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "throws": {
+                "description": "",
+                "type": "UnSupportedException"
+            },
+            "class": "AndroidBridge"
+        },
+        {
+            "file": "javascript\\Implement\\BridgeFactory.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "BridgeFactory"
+        },
+        {
+            "file": "javascript\\Implement\\BridgeFactory.js",
+            "line": 11,
+            "itemtype": "method",
+            "name": "Create",
+            "params": [
+                {
+                    "name": "userAgent",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "IjsBridge"
+            },
+            "class": "BridgeFactory"
+        },
+        {
+            "file": "javascript\\Implement\\BridgeLogger.js",
+            "line": 8,
+            "description": "写日志",
+            "itemtype": "method",
+            "name": "write",
+            "params": [
+                {
+                    "name": "text",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "BridgeLogger"
+        },
+        {
+            "file": "javascript\\Implement\\H5Bridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\H5Bridge.js",
+            "line": 20,
+            "description": "H5Bridge inherit AjsBridge",
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\H5Bridge.js",
+            "line": 25,
+            "itemtype": "method",
+            "name": "_iosReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\H5Bridge.js",
+            "line": 35,
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "IosBridge"
+        },
+        {
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 22,
+            "description": "IosBridge inherit AjsBridge",
+            "class": "IosBridge"
+        },
+        {
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 27,
+            "itemtype": "method",
+            "name": "_iosReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "IosBridge"
+        },
+        {
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 37,
+            "itemtype": "method",
+            "name": "onScanComplete",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "IosBridge"
+        },
+        {
+            "file": "javascript\\Implement\\IosBridge.js",
+            "line": 45,
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "throws": {
+                "description": "",
+                "type": "UnSupportedException"
+            },
+            "class": "IosBridge"
+        },
+        {
+            "file": "javascript\\Implement\\MobileBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\MobileBridge.js",
+            "line": 20,
+            "description": "H5Bridge inherit AjsBridge",
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\MobileBridge.js",
+            "line": 25,
+            "itemtype": "method",
+            "name": "_iosReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\MobileBridge.js",
+            "line": 35,
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "H5Bridge"
+        },
+        {
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "融e联"
+        },
+        {
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 36,
+            "itemtype": "method",
+            "name": "_relReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "融e联"
+        },
+        {
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 49,
+            "itemtype": "method",
+            "name": "_listenrelError",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "融e联"
+        },
+        {
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 62,
+            "description": "远程获取微信配置",
+            "itemtype": "method",
+            "name": "_remoteGetConfig",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "融e联"
+        },
+        {
+            "file": "javascript\\Implement\\RelBridge.js",
+            "line": 102,
+            "description": "调用扫描",
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "throws": {
+                "description": "",
+                "type": "UnSupportedException"
+            },
+            "class": "融e联"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 36,
+            "itemtype": "method",
+            "name": "_wechatReady",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 49,
+            "itemtype": "method",
+            "name": "_listenWechatError",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 62,
+            "description": "远程获取微信配置",
+            "itemtype": "method",
+            "name": "_remoteGetConfig",
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 89,
+            "description": "调用扫描",
+            "override": "",
+            "itemtype": "method",
+            "name": "scan",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "throws": {
+                "description": "",
+                "type": "UnSupportedException"
+            },
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Implement\\WechatBridge.js",
+            "line": 126,
+            "description": "设置appid appsecret",
+            "override": "",
+            "params": [
+                {
+                    "name": "appOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "WechatBridge"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 1,
+            "description": "author : codec007\ndate   : 20160122",
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 6,
+            "interface": "IjsBridge",
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 11,
+            "description": "复制属性",
+            "itemtype": "method",
+            "name": "extend",
+            "abstract": "",
+            "params": [
+                {
+                    "name": "object,object,object...",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 20,
+            "description": "监听事件",
+            "itemtype": "method",
+            "name": "addEventListener",
+            "abstract": "",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                },
+                {
+                    "name": "listener",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 30,
+            "description": "派发事件",
+            "itemtype": "method",
+            "name": "dispatchEvent",
+            "abstract": "",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 39,
+            "description": "删除监听",
+            "itemtype": "method",
+            "name": "removeEventListener",
+            "abstract": "",
+            "params": [
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "BridgeEventType"
+                },
+                {
+                    "name": "listener",
+                    "description": "",
+                    "type": "Function"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 49,
+            "params": [
+                {
+                    "name": "ajaxOptions",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 56,
+            "description": "扫描二维码",
+            "itemtype": "method",
+            "name": "scan",
+            "virtual": "",
+            "params": [
+                {
+                    "name": "scanOptions",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Void"
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Interface\\IjsBridge.js",
+            "line": 66,
+            "description": "设置appId appSecret",
+            "itemtype": "method",
+            "name": "setAppOptions",
+            "params": [
+                {
+                    "name": "appOptions",
+                    "description": "",
+                    "type": "AppOptions"
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "AjaxOptions"
+        },
+        {
+            "file": "javascript\\Options\\ScanOptions.js",
+            "line": 1,
+            "description": "扫码设置",
+            "itemtype": "property",
+            "name": "DefaultScanOptions",
+            "type": "Object",
+            "class": ""
+        },
+        {
+            "file": "javascript\\Options\\ScanOptions.js",
+            "line": 7,
+            "description": "扫码类型",
+            "itemtype": "attribute",
+            "name": "scanType",
+            "type": "scanType",
+            "default": "scanType.qrCode",
+            "class": ""
+        },
+        {
+            "file": "javascript\\Options\\ScanOptions.js",
+            "line": 17,
+            "itemtype": "event",
+            "name": "onComplete",
+            "class": ""
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: enum",
+            "line": " javascript\\Enumerable\\BridgeEnum.js:1"
+        },
+        {
+            "message": "unknown tag: enum",
+            "line": " javascript\\Enumerable\\BridgeEnum.js:7"
+        },
+        {
+            "message": "unknown tag: enum",
+            "line": " javascript\\Events\\BridgeEvents.js:6"
+        },
+        {
+            "message": "unknown tag: exception",
+            "line": " javascript\\Exceptions\\Exceptions.js:6"
+        },
+        {
+            "message": "unknown tag: exception",
+            "line": " javascript\\Exceptions\\Exceptions.js:23"
+        },
+        {
+            "message": "unknown tag: exception",
+            "line": " javascript\\Exceptions\\Exceptions.js:40"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Exceptions\\Exceptions.js:40"
+        },
+        {
+            "message": "unknown tag: abstract",
+            "line": " javascript\\Implement\\AjsBridge.js:8"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AjsBridge.js:26"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:26"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AjsBridge.js:46"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:46"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AjsBridge.js:58"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:58"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AjsBridge.js:73"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:73"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:91"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AjsBridge.js:155"
+        },
+        {
+            "message": "param name missing: {AppOptions}",
+            "line": " javascript\\Implement\\AjsBridge.js:155"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\AjsBridge.js:155"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AlipayBridge.js:44"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\AndroidBridge.js:45"
+        },
+        {
+            "message": "replacing incorrect tag: function with method",
+            "line": " javascript\\Implement\\BridgeFactory.js:11"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\BridgeFactory.js:11"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\H5Bridge.js:35"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\IosBridge.js:37"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\IosBridge.js:45"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\MobileBridge.js:35"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\RelBridge.js:49"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\RelBridge.js:102"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\WechatBridge.js:49"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\WechatBridge.js:89"
+        },
+        {
+            "message": "unknown tag: override",
+            "line": " javascript\\Implement\\WechatBridge.js:126"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Implement\\WechatBridge.js:126"
+        },
+        {
+            "message": "unknown tag: abstract",
+            "line": " javascript\\Interface\\IjsBridge.js:11"
+        },
+        {
+            "message": "unknown tag: abstract",
+            "line": " javascript\\Interface\\IjsBridge.js:20"
+        },
+        {
+            "message": "unknown tag: abstract",
+            "line": " javascript\\Interface\\IjsBridge.js:30"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Interface\\IjsBridge.js:30"
+        },
+        {
+            "message": "unknown tag: abstract",
+            "line": " javascript\\Interface\\IjsBridge.js:39"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Interface\\IjsBridge.js:49"
+        },
+        {
+            "message": "unknown tag: virtual",
+            "line": " javascript\\Interface\\IjsBridge.js:56"
+        },
+        {
+            "message": "replacing incorrect tag: returns with return",
+            "line": " javascript\\Interface\\IjsBridge.js:66"
+        },
+        {
+            "message": "Missing item type\n容器类型",
+            "line": " javascript\\Enumerable\\BridgeEnum.js:1"
+        },
+        {
+            "message": "Missing item type\n扫描类型",
+            "line": " javascript\\Enumerable\\BridgeEnum.js:7"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Events\\BridgeEvents.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " javascript\\Events\\BridgeEvents.js:6"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Exceptions\\Exceptions.js:1"
+        },
+        {
+            "message": "Missing item type\n未实现",
+            "line": " javascript\\Exceptions\\Exceptions.js:6"
+        },
+        {
+            "message": "Missing item type\nNotImplementException inherit Error",
+            "line": " javascript\\Exceptions\\Exceptions.js:17"
+        },
+        {
+            "message": "Missing item type\n不支持的异常",
+            "line": " javascript\\Exceptions\\Exceptions.js:23"
+        },
+        {
+            "message": "Missing item type\nUnSupportedException inherit Error",
+            "line": " javascript\\Exceptions\\Exceptions.js:34"
+        },
+        {
+            "message": "Missing item type\n参数异常",
+            "line": " javascript\\Exceptions\\Exceptions.js:40"
+        },
+        {
+            "message": "Missing item type\nArgumentException inherit Error",
+            "line": " javascript\\Exceptions\\Exceptions.js:51"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122\ndocument:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model#Property_inheritance_revisited",
+            "line": " javascript\\Implement\\AjsBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nAlipayBridge Implement IjsBridge",
+            "line": " javascript\\Implement\\AjsBridge.js:21"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\AlipayBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nAlipayBridge inherit AjsBridge",
+            "line": " javascript\\Implement\\AlipayBridge.js:26"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\AndroidBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nAndroidBridge inherit AjsBridge",
+            "line": " javascript\\Implement\\AndroidBridge.js:20"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\BridgeFactory.js:1"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\H5Bridge.js:1"
+        },
+        {
+            "message": "Missing item type\nH5Bridge inherit AjsBridge",
+            "line": " javascript\\Implement\\H5Bridge.js:20"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\IosBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nIosBridge inherit AjsBridge",
+            "line": " javascript\\Implement\\IosBridge.js:22"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\MobileBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nH5Bridge inherit AjsBridge",
+            "line": " javascript\\Implement\\MobileBridge.js:20"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\RelBridge.js:1"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Implement\\WechatBridge.js:1"
+        },
+        {
+            "message": "Missing item type\n设置appid appsecret",
+            "line": " javascript\\Implement\\WechatBridge.js:126"
+        },
+        {
+            "message": "Missing item type\nauthor : codec007\ndate   : 20160122",
+            "line": " javascript\\Interface\\IjsBridge.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " javascript\\Interface\\IjsBridge.js:6"
+        },
+        {
+            "message": "Missing item type",
+            "line": " javascript\\Interface\\IjsBridge.js:49"
+        }
+    ]
+}

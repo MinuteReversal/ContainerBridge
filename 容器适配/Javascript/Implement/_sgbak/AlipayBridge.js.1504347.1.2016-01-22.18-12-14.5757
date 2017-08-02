@@ -1,0 +1,55 @@
+﻿/**
+ * author : codec007
+ * date   : 20160122
+ */
+
+/**
+ * @class AlipayBridge
+ * @returns {} 
+ */
+function AlipayBridge() {
+    this.ContainerType = ContainerType.Alipay;
+
+    //load AlipayJsApi
+    var script = document.createElement("script");
+    script.addEventListener("load", function (e) {
+        if (typeof AlipayJSBridge === "undefined") alert("not find AlipayJSBridge object!");
+    });
+    document.querySelector("head").insertBefore(script);
+    script.src = ContainerBridgeConfig.alipayJsUrl;
+}
+
+/**
+ * AlipayBridge Implement AjsBridge
+ */
+AlipayBridge.prototype = new AjsBridge();
+
+/**
+ * @function override Scan
+ * @param {object} scanOptions 
+ * @returns {void} 
+ */
+AlipayBridge.prototype.Scan = function (scanOptions) {
+    if (!scanOptions) throw new ArgumentException("scanOptions");
+
+    var me = this;
+    var options = me.extend(me.DefaultScanOptions, scanOptions);
+
+    var alipayScanOptions = { type: 'qr' };
+
+    switch (options.scanType) {
+        case scanType.barCode:
+            alipayScanOptions.type = "bar";
+            break;
+        case scanType.qrCode:
+            alipayScanOptions.type = "qr";
+            break;
+        case scanType.cardNumber:
+            alipayScanOptions.type = "card";
+            break;
+    }
+
+    AlipayJSBridge.call('scan', alipayScanOptions, function (result) {
+        options.completeFn(result[options.scanType]);//通知用户的订阅
+    });
+}

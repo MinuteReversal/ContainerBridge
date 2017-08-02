@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../containerBridgeConfig.js"></script>
+    <script src="../containerBridge.min.js"></script>
+</head>
+<body>
+    <script>
+        ContainerBridge.addEventListener(BridgeEventType.ready, function (e) {
+            alert("BridgeEventType.ready");
+            if (typeof wx === "undefined") return;
+            console.log("wx ready");
+            wx.closeWindow();
+        });
+    </script>
+</body>
+</html>

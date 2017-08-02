@@ -1,0 +1,39 @@
+﻿/**
+ * author : codec007
+ * date   : 20160122
+ */
+
+var ContainerType = { "Wechat": "Wechat", "Alipay": "Alipay", "Andriod": "Andriod", "WindowsPhone": "WindowsPhone", "IOS": "IOS", "PC": "PC" };
+
+/**
+ * @class BridgeFactory
+ * @returns {void} 
+ */
+function BridgeFactory() { }
+
+/**
+ * @function Create
+ * @param {string} userAgent 
+ * @returns {IjsBridge} 
+ */
+BridgeFactory.prototype.Create = function (userAgent) {
+    var bridge;
+    if (/MicroMessenger/ig.test(userAgent)) {
+        bridge = new WechatBridge();
+    }
+    else if (/AlipayClient/ig.test(userAgent)) {
+        bridge = new AlipayBridge();
+    }
+    else if (/AndriodShell/ig.test(userAgent)) {
+        bridge = new AndriodBridge();
+    }
+    else if (/IOS/ig.test(userAgent)) {
+        bridge = new IosBridge();
+    }
+    else {
+        bridge = new H5Bridge();
+    }
+    return bridge;
+};
+
+var ContainerBridge =new BridgeFactory().Create(window.navigator.userAgent);

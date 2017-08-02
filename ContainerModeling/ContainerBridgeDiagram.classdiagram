@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="99b5232c-a4a9-41e6-9292-030469c281fc" name="UMLClassDiagram1" linkedPackageId="49bd4a1b-66b4-4cee-bad5-b5fae6b75e61" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ca0c837b-d0ae-4be6-a9ad-615a6772eaab" name="IjsBridge" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="511a02c0-3f93-46a1-8d5a-921bfc78e5c5" />
+        <suppliersInternal>
+          <dependency Id="ff006ab7-6904-4c0e-9f5b-c751babf472c">
+            <enumerationMoniker Id="a9425110-eb7f-4f34-9939-19d8b1880c1d" LastKnownName="scanType" />
+            <elementDefinition Id="ac41cba4-b453-4b5a-a881-a24421d63867" />
+          </dependency>
+          <dependency Id="aab859cf-2fe3-4535-aa84-403212a2504c">
+            <classMoniker Id="42d26c57-c885-495b-a003-6629a8d39543" LastKnownName="Listener" />
+            <elementDefinition Id="870bdc7c-a75e-4eea-b0be-0b4882cdf783" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation Id="e822f6ba-5e0f-4f25-8f45-d3af9d0355d6" name="extend" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="42b404e5-1d44-4d34-9126-a8698d953140" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37fdcadf-7bd0-498c-9016-e6bb45897708" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="f15b9a56-d499-4d6e-ba22-e9e91f51cf99" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4cfcb7f-0b55-466b-9606-8d3e41ead099" LastKnownName="object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ca4ab61-56ce-4bd5-91f5-a9e4bd83b088" name="..." direction="In" isUnique="false">
+                  <elementDefinition Id="11d2bcb7-096a-4d39-a0f0-499007242687" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7d772441-2b79-449c-ba8e-b43c37371904" name="scan" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9d3e2cce-69d6-46c8-809e-63ddb9ab6b51" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c508d3fc-3576-4b57-b59b-d62fae0d3b45" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="4be9b2e5-9a90-4156-93ea-baebb6ffe5e1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90ed6467-d7e0-4789-8ee0-7ce2503498e0" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6f06c1fe-43a4-4edc-9d50-91160ea0bdc6" name="addEventListener" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb55e312-d065-4534-825d-6fe2a5a6f3a7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a4b6c8a-3350-4a87-affd-8e609d1ce9c7" name="type" direction="In">
+                  <elementDefinition Id="3e80519e-ad47-4291-99f4-a6cdd5c0b7e3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e8f90829-8afa-42e1-a533-9011e2639ede" name="listener" direction="In">
+                  <elementDefinition Id="6a6ad3e4-0e77-4a57-a36a-1727cc75a03d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7446b15e-5c1d-4381-8b72-0ba98946a76f" LastKnownName="function" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="34c57148-e13f-4a17-8d39-8818562e510a" name="dispatchEvent" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ac8be34d-226d-45b6-9e2d-48bec3871044" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f68ed7cd-ebdb-4b98-a4c2-344f9a8c8252" name="type" direction="In">
+                  <elementDefinition Id="abaa7dc4-afe3-4040-8ea3-f9bbe42ad623" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7ed448ad-ee8b-49f3-bc42-b46a0ad023cd" name="removeEventListener" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="917a3154-7514-4500-a101-2a1321b0fc72" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f17187e3-7e3e-40dd-aa40-abc82fc8a78b" name="type" direction="In">
+                  <elementDefinition Id="082be3b6-4522-4b1b-9b47-1b0a53f0f1e3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="21d3dcc3-e261-4452-bd82-0e91591aa351" name="listener" direction="In">
+                  <elementDefinition Id="6a3ea419-bfc3-479e-a0df-b8ecc4618eec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7446b15e-5c1d-4381-8b72-0ba98946a76f" LastKnownName="function" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" name="AjsBridge" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51584467-0f79-4ddc-8405-b5d7e60a805e" />
+        <suppliersInternal>
+          <interfaceRealization Id="41db1749-63c3-4ab3-ac1f-c5380e6c905e">
+            <interfaceMoniker Id="ca0c837b-d0ae-4be6-a9ad-615a6772eaab" LastKnownName="IjsBridge" />
+            <elementDefinition Id="b734c0f0-394d-4d5d-aeaa-eb0506528943" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="8b100d73-b451-4855-b176-36617f6f5863" isDerived="false" sourceEndRoleName="AjsBridge" targetEndRoleName="BridgeLogger" isLeaf="false" isAbstract="false">
+            <classMoniker Id="0a4fbd0c-6f98-4ee0-ab1a-74b5f21702e8" LastKnownName="BridgeLogger" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8343d3ce-1d60-4f96-8a4d-a932d5d80053" name="AjsBridge" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="48e419f9-126d-4eee-bc70-696e87ef02e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d0282713-edac-488c-b87e-794fe12fa5f3" name="BridgeLogger" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f174abbf-1e49-4fe8-8369-f6e1c7442569" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f0cc911c-03d4-4efc-8994-7f5f5ac5bd9a" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="56375a2e-99ff-4d1c-af32-ba046e2bf651" name="DefaultScanOptions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="324a05af-5039-4870-ab32-926394857c97" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="b91cf711-6708-4d3a-bc60-182a48c31acb" name="extend" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1a6b28eb-4875-4780-b8ed-c8aa9a8662fb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4684eae9-4c21-4f84-b528-b4d2de401479" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="e8ddde57-6f51-4068-9634-6ffe924a8da8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a4cfcb7f-0b55-466b-9606-8d3e41ead099" LastKnownName="object" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="61003635-87b5-4c1a-b9a6-fb2e4bf1e7a3" name="..." direction="In" isUnique="false">
+                  <elementDefinition Id="e7bafb62-f272-477c-99d2-aade4d231cde" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="15d40120-47f1-44ea-ac43-23bf5bf36c33" name="scan" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a649ed1d-2698-4544-bbe2-6193acb3acc9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2b66905c-8f6b-44be-b1aa-81e5687035b3" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="8ba7d98d-39fc-4ac1-ad54-1345c789e2a0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90ed6467-d7e0-4789-8ee0-7ce2503498e0" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="72f63c0e-40ef-4c27-b6fb-9009b34293cc" name="addEventListener" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f62096b2-cb0e-4c31-92e2-df8880752591" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="82c293de-14f7-4b2d-9edc-680ed1213830" name="type" direction="In">
+                  <elementDefinition Id="a6c8b23d-5eab-4251-896f-0f819bec849d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="61503c1d-1a33-4d4d-b6f1-60b090fd1042" name="listener" direction="In">
+                  <elementDefinition Id="0382b3cc-bbb8-4ade-a154-b3c5b9ebba53" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7446b15e-5c1d-4381-8b72-0ba98946a76f" LastKnownName="function" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fe9297fb-f34d-448b-94fe-57ff3dd01444" name="dispatchEvent" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c08458ee-3ffa-409d-8df3-b36dfd19953b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="db5b3fb7-e795-4867-8bfc-3897ec928dd9" name="type" direction="In">
+                  <elementDefinition Id="caa8508a-e9d0-4b03-a272-3c1bff547228" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3e56dd6f-a427-4f6a-949f-3d9c988864ff" name="removeEventListener" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b7b798a4-8019-4337-bd97-51cd8a8fbeaf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="075ded88-46d4-4647-9dae-c5b2c248af21" name="type" direction="In">
+                  <elementDefinition Id="daa5e983-9de8-4781-b7df-4c857daf144b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" LastKnownName="bridgeEventType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="46e1ed74-7f4c-4259-8eb8-c83536bf2032" name="listener" direction="In">
+                  <elementDefinition Id="36502daf-4122-44a4-b66c-c3f0719edf88" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="7446b15e-5c1d-4381-8b72-0ba98946a76f" LastKnownName="function" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a4cfcb7f-0b55-466b-9606-8d3e41ead099" name="object" isAbstract="false" isLeaf="false" cachedFullName="object">
+        <elementDefinition Id="86ef4b2f-33d7-4a8a-b36f-fa27124446be" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8893f92e-aa2d-4496-902f-12f1f71c04e7" name="bridgeEventType" isAbstract="false" isLeaf="false" cachedFullName="bridgeEventType">
+        <elementDefinition Id="936ba437-cf9f-4b4f-a601-eab5f2ff11c3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7446b15e-5c1d-4381-8b72-0ba98946a76f" name="function" isAbstract="false" isLeaf="false" cachedFullName="function">
+        <elementDefinition Id="593ee3c9-76a5-4c36-9928-daa124e881d5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="90ed6467-d7e0-4789-8ee0-7ce2503498e0" name="scanOptions" isAbstract="false" isLeaf="false" cachedFullName="scanOptions">
+        <elementDefinition Id="567093e5-d879-4046-8dbf-5f792ec378df" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="05c9c880-151c-4c91-a3d8-e818aa3464b4" name="AlipayBridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e75e8220-7d4e-4c0b-befa-c508b5af0ccd" />
+        <generalsInternal>
+          <generalization Id="6ea7ed7e-5a30-43a1-8ee7-381aaaef90b5" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="4df9fadb-b398-4efe-bb51-1d2e6766e258" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="6bdf7c79-e8cf-4d76-9f2e-b382d6607a0f" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4451e68c-6971-42d9-b601-1f0e840d9a32" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1e889883-1a00-4489-943e-f6206e6626bf" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="f0d48837-3398-40e2-ae54-ce91c7dfbd55" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90ed6467-d7e0-4789-8ee0-7ce2503498e0" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="005edbc2-8d0a-4867-a1f3-953156f518ce" name="scanOptions" isAbstract="false" isLeaf="false" cachedFullName="scanOptions">
+        <elementDefinition Id="567093e5-d879-4046-8dbf-5f792ec378df" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aa7f3d71-68e3-40a3-b5f0-e98c52369ece" name="AndriodBridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="973d4c45-91bc-441f-8cf4-275fa018d61e" />
+        <generalsInternal>
+          <generalization Id="746e6fad-183b-44e1-9c6c-7f232a53d910" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="e72365fa-ce3f-4793-ab75-c64d701c1637" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="1faa3fce-8b93-4f79-ae7f-1db6449a1fd9" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4e1a4359-704c-4561-a015-91da55eac746" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="90fcef64-a4be-44c0-a169-d9fd7ae40fbf" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="55d18874-3fda-419c-9a85-369228767d50" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="005edbc2-8d0a-4867-a1f3-953156f518ce" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="a9b4221f-6117-42e1-b77a-edb8815b26c0" name="scanOptions" isAbstract="false" isLeaf="false" cachedFullName="scanOptions">
+        <elementDefinition Id="567093e5-d879-4046-8dbf-5f792ec378df" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2b731a47-72d8-4aaa-b9ae-994cd69e6445" name="H5Bridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4bd6d320-98b4-4206-b8b4-bca2f35b87e6" />
+        <generalsInternal>
+          <generalization Id="46df9ece-d6d8-4696-b839-2253d0cbdd9a" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="16595dfb-7496-4d56-af32-0ec476212202" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="2c9dc50d-c2d3-4049-ba88-afd5edded864" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="86dd9b59-2411-43dc-82aa-a3741b8a5139" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="043707a4-19b1-43cc-9c15-464d8d1c9f75" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="db4bd564-fe09-4469-b5a9-4f25c7058e4b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9b4221f-6117-42e1-b77a-edb8815b26c0" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5cf7e712-291c-40cb-b563-18d2c368dede" name="scanOptions" isAbstract="false" isLeaf="false" cachedFullName="scanOptions">
+        <elementDefinition Id="567093e5-d879-4046-8dbf-5f792ec378df" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="871daeeb-336d-4c51-8250-abaa70f0cd36" name="IosBridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b38610ae-fa07-4b25-a744-a4a7382bc161" />
+        <generalsInternal>
+          <generalization Id="85718abb-eeb9-4f40-b366-8eb78dc90915" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="415f9419-d2f1-4f2c-bab4-b488e4dfdf61" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="db7fc7c4-a7a1-4e1b-8100-cb62fb58694a" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="677378a9-379e-46d4-b35c-043e50a4f314" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="96dddb1b-d83d-434e-a762-3e8be5f19bb1" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="3ca0dd7c-5449-41a2-9f0b-c372b8c1d8fd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="5cf7e712-291c-40cb-b563-18d2c368dede" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="be691601-c10d-4fe3-bb70-c6506b75033e" name="scanOptions" isAbstract="false" isLeaf="false" cachedFullName="scanOptions">
+        <elementDefinition Id="567093e5-d879-4046-8dbf-5f792ec378df" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e44f0f22-84a7-4564-a924-cad87cc2f001" name="WechatBridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7b35fd82-3764-4fcd-89a6-ae5f36434488" />
+        <generalsInternal>
+          <generalization Id="f2a146e5-6b0e-46aa-b5da-e006a5b4d204" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="8773270a-8af4-4263-b75d-f579052db771" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="570e58af-960d-4938-a844-971c02199633" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e35cfc9a-2c3d-4578-920c-4b7290118ee4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="962f4b38-f709-481a-89da-a91f30601609" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="29208cc4-5703-47ee-aa05-36309d458f42" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="be691601-c10d-4fe3-bb70-c6506b75033e" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b743e907-4c26-459f-b2d2-de4fa7a1b514" name="BridgeFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="fc0a31e1-b436-4358-bc86-8f720168ad24" />
+        <suppliersInternal>
+          <dependency Id="43c6be93-73a5-419a-815c-ce2e732913e4">
+            <enumerationMoniker Id="5676ee8a-21ba-41b0-be25-8c06c7e2e356" LastKnownName="ContainerType" />
+            <elementDefinition Id="e7cb6280-ec1c-4204-8c7a-b0a60c78e7e7" />
+          </dependency>
+          <dependency Id="bd430310-5102-4c6d-a8a9-38e61fe7f624">
+            <classMoniker Id="05c9c880-151c-4c91-a3d8-e818aa3464b4" LastKnownName="AlipayBridge" />
+            <elementDefinition Id="8ee2ebb7-d96d-4f3b-a19c-bec4fb25c224" />
+          </dependency>
+          <dependency Id="fa601561-865d-4f12-aacb-c9d2648d2bbb">
+            <classMoniker Id="aa7f3d71-68e3-40a3-b5f0-e98c52369ece" LastKnownName="AndriodBridge" />
+            <elementDefinition Id="641e1300-6d6f-4ad6-91b6-60e2f9159eb9" />
+          </dependency>
+          <dependency Id="238ee241-1e37-4b5f-af9b-aaf8c75cc114">
+            <classMoniker Id="2b731a47-72d8-4aaa-b9ae-994cd69e6445" LastKnownName="H5Bridge" />
+            <elementDefinition Id="6c3953d3-9fe0-4850-b668-a9f3472c74cb" />
+          </dependency>
+          <dependency Id="bf265c9e-88af-44dc-9818-bd924e82a899">
+            <classMoniker Id="871daeeb-336d-4c51-8250-abaa70f0cd36" LastKnownName="IosBridge" />
+            <elementDefinition Id="4eb35f04-6400-4cc9-87f5-cdc5cd83b27c" />
+          </dependency>
+          <dependency Id="ce652d1e-acc4-40c3-aedc-9ba15ca67754">
+            <classMoniker Id="e44f0f22-84a7-4564-a924-cad87cc2f001" LastKnownName="WechatBridge" />
+            <elementDefinition Id="3e9d82d6-5abb-48ae-82cb-56f98ec1ea56" />
+          </dependency>
+          <dependency Id="248f0876-22c5-4d3b-a468-9f9554b9f2db">
+            <classMoniker Id="6d86962b-e3c1-464f-b280-cad6db26e380" LastKnownName="MobileBridge" />
+            <elementDefinition Id="7fcaa2c4-1f45-4aac-96ae-b9f3571275d5" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="b0e9c617-ae1a-430c-8b16-9c14274f46e8" name="Create" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1917af10-a04a-4574-a454-be3550583e38" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c440b89-eb6d-4098-a480-ac3f85437641" name="userAgent" direction="In">
+                  <elementDefinition Id="be7deba7-c202-44a4-b126-0d78a745c0b8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="14577b4e-fe86-4a22-a02f-0e9d184543aa" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22e9ba6d-4ee8-411f-913f-1ef4dc5c2052" name="Parameter1" direction="In">
+                  <elementDefinition Id="47a9b427-4972-4a2e-b45c-b879352c6b72" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="92db54a4-8655-4a2f-8df3-35be865a3f62" direction="Return">
+                  <elementDefinition Id="ead7cd3c-66ea-468b-8d0c-f0573562a1b6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fe752853-f1f3-4e5a-a912-c554a1dafdf4" LastKnownName="IjsBridge" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="14577b4e-fe86-4a22-a02f-0e9d184543aa" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="46ff4ad9-aad9-47b6-b4e9-419313a266c4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fe752853-f1f3-4e5a-a912-c554a1dafdf4" name="IjsBridge" isAbstract="false" isLeaf="false" cachedFullName="ContainerModeling::IjsBridge">
+        <elementDefinition Id="511a02c0-3f93-46a1-8d5a-921bfc78e5c5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="5676ee8a-21ba-41b0-be25-8c06c7e2e356" name="ContainerType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa00686b-eb73-424c-ba88-6da6da9d746c" />
+        <ownedLiterals>
+          <enumerationLiteral Id="5b1faf48-69f3-414e-bea0-d3596482acd6" name="Wechat">
+            <elementDefinition Id="e4a8ae7f-8c4c-4185-9f57-3a97223e7c95" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="6fb1b7f4-e9b8-43cd-a7c2-02af2945d22c" name="Alipay">
+            <elementDefinition Id="c4f33a50-26a1-450b-9cc5-cf9aebcf1c04" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="e41901fe-6626-47da-ab3a-c4daa56721d5" name="Android">
+            <elementDefinition Id="3168fc11-f495-4d3d-abf2-a39f6bebcafb" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="883b0084-105a-4464-813e-02835eeef821" name="WindowsPhone">
+            <elementDefinition Id="41376383-18cd-40b5-ab26-68caf31d5c43" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="b57a8886-05a7-4dbb-a41c-fe18ea578f31" name="IOS">
+            <elementDefinition Id="0e3cb4d8-5e93-4511-bec5-f3aecbce8b59" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="089b090d-4b0e-423d-98a5-2f095d2cbba9" name="PC">
+            <elementDefinition Id="626d6fc5-445f-4232-8107-0baec76c26a9" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="a9425110-eb7f-4f34-9939-19d8b1880c1d" name="scanType" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0bd8822a-69de-4a82-97e0-5208bb2be23e" />
+        <ownedLiterals>
+          <enumerationLiteral Id="e4efdaca-c079-4ffc-8097-8e874ea932d9" name="barCode">
+            <elementDefinition Id="18eb9639-09e7-447c-ba61-7c902ed617d0" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="884cfb40-e636-4084-babd-ce678edba58f" name="qrCode">
+            <elementDefinition Id="55756dfa-a9e8-4f98-ac16-0a450d2afcf8" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="b84d851e-0b1c-422f-9656-d9a06d13627c" name="cardNumber">
+            <elementDefinition Id="16a62ab0-4c44-4fa8-956f-ff43f12c0df3" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="42d26c57-c885-495b-a003-6629a8d39543" name="Listener" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="411f0507-d8a0-4e6d-b265-4621c2a30736" />
+        <ownedAttributesInternal>
+          <property Id="4c43998b-fa83-4d7e-9a24-cf6eb2752f2e" name="type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de816672-6a3b-4d30-8fe2-5267d12a711d" />
+          </property>
+          <property Id="063b0d2d-1375-4345-a755-cf2fa8b1924e" name="listenerFn" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e4fc3e1c-028a-4c0d-9198-347eb5557297" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0a4fbd0c-6f98-4ee0-ab1a-74b5f21702e8" name="BridgeLogger" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e30dbad4-4dd7-4a03-82db-36ce1a90d1f2" />
+        <ownedOperationsInternal>
+          <operation Id="d31e0678-10e4-4bd4-8ec6-dade71621280" name="write" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="50a0fbe7-edd3-4314-87b6-dcebff75b790" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9c93eecc-04c1-45cd-849a-f2e935e03aa8" name="text" direction="In">
+                  <elementDefinition Id="e10a018e-2697-414e-a28b-7ef26edef4d2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8adfd008-ec7e-4373-92bb-3e5ab7e19612" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8adfd008-ec7e-4373-92bb-3e5ab7e19612" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6d86962b-e3c1-464f-b280-cad6db26e380" name="MobileBridge" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a5cf074-6a82-4e97-98ab-b609d0dbc6be" />
+        <generalsInternal>
+          <generalization Id="aee5da80-35bc-4828-86c9-7bed97a66deb" isSubstitutable="false">
+            <classMoniker Id="3a44bf7b-b11d-48e7-a79c-6c900f888aed" LastKnownName="AjsBridge" />
+            <elementDefinition Id="1605218a-b054-45f6-8e50-53007a993531" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="c3f46586-036f-4514-8f98-bda9d285e788" name="scan" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d6c16232-1e09-4d8b-b954-b0d36f169c37" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4ca35dae-a480-4113-8aaf-b7ef865845aa" name="object" direction="In" isUnique="false">
+                  <elementDefinition Id="bcdbc436-98bd-4f29-bbe5-a1018d624d89" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90ed6467-d7e0-4789-8ee0-7ce2503498e0" LastKnownName="scanOptions" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="49bd4a1b-66b4-4cee-bad5-b5fae6b75e61" name="ContainerModeling">
+    <elementDefinition Id="4d95101f-240a-4847-b9d3-bbeaa24f0615" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7002c1de-b306-44f5-a9c4-f054c0135d8f">
+        <profileInstance Id="db46f107-8750-4387-9fb3-7af5ed59d181" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2c85a297-00da-4817-a108-27a2ee8f16d3">
+        <profileInstance Id="0e5b67f1-f08e-42fa-b356-bf210148c90c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

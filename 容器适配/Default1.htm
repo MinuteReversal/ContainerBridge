@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>容器适配器</title>
+    <script src="containerBridgeConfig.js"></script>
+    <script src="containerBridge.min.js"></script>
+    <!--<script src="Javascript/Implement/BridgeLogger.js"></script>
+    <script src="Javascript/Events/BridgeEvents.js"></script>
+    <script src="Javascript/Exceptions/Exceptions.js"></script>
+    <script src="Javascript/Enumerable/BridgeEnum.js"></script>
+    <script src="Javascript/Interface/IjsBridge.js"></script>
+    <script src="Javascript/Interface/AjsBridge.js"></script>
+    <script src="Javascript/Implement/AndriodBridge.js"></script>
+    <script src="Javascript/Implement/AlipayBridge.js"></script>
+    <script src="Javascript/Implement/H5Bridge.js"></script>
+    <script src="Javascript/Implement/IosBridge.js"></script>
+    <script src="Javascript/Implement/WechatBridge.js"></script>
+    <script src="Javascript/Interface/BridgeFactory.js"></script>-->
+</head>
+<body>
+    <button id="scan">扫描</button>
+    <button onclick="alert('OK')">TEST</button>
+    <input type="text" id="output" />
+    <script>
+        alert(JSON.stringify(ContainerBridge));
+
+        ContainerBridge.addEventListener(BridgeEventType.ready, function (event) {
+            alert("容器准备好了！" + ContainerBridge.ContainerType);
+        });
+
+        document.querySelector("#scan").addEventListener("click", function (e) {            
+            try {
+                ContainerBridge.scan({
+                    complete: function (resultStr) {
+                        document.getElementById("output").value = resultStr;
+                    }
+                });
+            } catch (e) {
+                alert(e.message);
+            }
+        });
+    </script>
+</body>
+</html>

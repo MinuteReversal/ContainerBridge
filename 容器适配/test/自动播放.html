@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../containerBridgeConfig.js"></script>
+    <script src="../containerBridge.min.js"></script>
+    <style>
+        audio{
+            height:80px;
+        }
+    </style>
+</head>
+<body>
+    <audio src="卢冠廷 - 一生所爱.mp3" loop controls></audio>
+    <script>
+        var a = document.querySelector("audio");
+        a.addEventListener("load", function () {
+            a.play();
+        });
+        ContainerBridge.addEventListener(BridgeEventType.ready, function () {
+            a.play();
+            alert("ready");
+        });
+    </script>
+</body>
+</html>

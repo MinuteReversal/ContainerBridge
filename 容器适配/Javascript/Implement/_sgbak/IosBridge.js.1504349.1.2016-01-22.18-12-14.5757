@@ -1,0 +1,7 @@
+﻿/**
+ * author : codec007
+ * date   : 20160122
+ */
+
+function IosBridge() { this.ContainerType = ContainerType.IOS; }
+IosBridge.prototype = new AjsBridge();

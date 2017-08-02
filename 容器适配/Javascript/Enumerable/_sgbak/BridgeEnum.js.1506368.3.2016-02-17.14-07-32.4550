@@ -1,0 +1,21 @@
+﻿/**
+ * 容器类型
+ * @enum ContainerType
+ */
+var ContainerType = {
+    "Wechat": "Wechat",
+    "Alipay": "Alipay",
+    "Android": "Android",
+    "AndroidShell": "AndroidShell",
+    "WindowsPhone": "WindowsPhone",
+    "WindowsPhoneShell": "WindowsPhoneShell",
+    "iOSShell": "iOSShell",
+    "iOS": "iOS",
+    "PC": "PC"
+};
+
+/**
+ * 扫描类型
+ * @enum scanType 
+ */
+var ScanType = { "barCode": "barCode", "qrCode": "qrCode", "cardNumber": "cardNumber" }

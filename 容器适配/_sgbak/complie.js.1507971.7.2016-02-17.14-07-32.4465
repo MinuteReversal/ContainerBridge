@@ -1,0 +1,31 @@
+var fs = require('fs');
+var UglifyJS = require("C:\\Windows\\System32\\node_modules\\uglify-js");
+
+
+// 批量读取文件，压缩之
+function buildOne(fileIn, fileOut) {
+    var result = UglifyJS.minify(fileIn);
+    fs.writeFileSync(fileOut, result.code, 'utf8');
+}
+
+//批量的话写多个一起执行即可
+buildOne(
+    [
+        "Javascript/Implement/BridgeLogger.js",
+        "Javascript/Events/BridgeEvents.js",
+        "Javascript/Exceptions/Exceptions.js",
+        "Javascript/Events/BridgeEvents.js",
+        "Javascript/Enumerable/BridgeEnum.js",
+        "Javascript/Interface/IjsBridge.js",
+        "Javascript/Implement/AjsBridge.js",
+        "Javascript/Implement/AlipayBridge.js",
+        "Javascript/Implement/AndriodBridge.js",
+        "Javascript/Implement/AndriodShellBridge.js",
+        "Javascript/Implement/H5Bridge.js",
+        "Javascript/Implement/IosBridge.js",
+        "Javascript/Implement/IosShellBridge.js",
+        "Javascript/Implement/WechatBridge.js",
+        "Javascript/Implement/BridgeFactory.js"
+    ],
+    'containerBridge.min.js'
+);

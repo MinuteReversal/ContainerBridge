@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8"/>
+    <script src="../containerBridgeConfig.js"></script>
+    <script src="../containerBridge.all.js"></script>
+</head>
+<body>
+    <script>
+        ContainerBridge = new BridgeFactory().Create("MicroMessenger");
+        ContainerBridge.extend({ name: "zhy" }, { name: "aaa" });
+    </script>
+</body>
+</html>

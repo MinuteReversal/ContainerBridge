@@ -1,0 +1,104 @@
+﻿/**
+ * author : codec007
+ * date   : 20160122
+ */
+
+/**
+ * @function  Listener
+ * @returns {void} 
+ */
+function Listener(type, listenerFn) {
+    this.type = "";
+    this.listenerFn = function (event) { };
+    if (type) this.type = type;
+    if (listenerFn) this.listenerFn = listenerFn;
+}
+
+/**
+ * @abstract class AjsBridge
+ * 
+ */
+function AjsBridge() {
+    this.Listeners = [];
+}
+
+AjsBridge.prototype = new IjsBridge();
+
+/**
+ * @virtual function extend
+ * @param {object},{object},{object}...
+ * @returns {object} 
+ */
+AjsBridge.prototype.extend = function () {
+    var o = {};
+    for (var i = 0, argument; argument = arguments[i]; i++) {
+        if (argument && typeof argument === "object") {
+            for (var property in argument) {
+                if (argument.hasOwnProperty(property)) {
+                    o[property] = argument[property];
+                }
+            }
+        }
+    }
+    return o;
+}
+
+/**
+ * @enum scanType 扫描类型
+ */
+var scanType = { "barCode": "barCode", "qrCode": "qrCode", "cardNumber": "cardNumber" }
+
+/**
+ * @instance {object} 扫码设置
+ */
+AjsBridge.prototype.DefaultScanOptions = {
+    scanType: scanType.qrCode, //可以指定扫二维码还是一维码{scanType}
+    completeFn: function (resultStr/*扫描结果*/) { }//扫描回调
+};
+
+/**
+ * @function addEventListener
+ * @param {string} type 
+ * @param {function name(event){}} listener 
+ * @returns {void} 
+ */
+AjsBridge.prototype.addEventListener = function (type, listener) {
+    var me = this;
+    me.Listeners.push(new Listener(type, listener));
+
+};
+
+/**
+ * @function dispatchEvent
+ * @param {sting} eventType 
+ * @returns {void} 
+ */
+AjsBridge.prototype.dispatchEvent = function (eventType) {
+    var me = this;
+    me.Listeners.forEach(function (item, index, array) {
+        if (item.type === eventType) {
+            item.listenerFn(eventType);
+        }
+    });
+};
+
+/**
+ * @function removeEventListener
+ * @param {string} type 
+ * @param {function name(event){}} listener 
+ * @returns {void} 
+ */
+AjsBridge.prototype.removeEventListener = function (type, listener) {
+    var me = this;
+    me.Listeners.forEach(function (item, index, array) {
+        if (item.type === type && item.listenerFn === listener) {
+            array.splice(index, 1);
+        }
+    });
+};
+
+/**
+ * @abstract function Scan 扫描二维码
+ * @returns {void} 
+ */
+AjsBridge.prototype.Scan = function (scanOptions) { throw new Error("not implement!"); };

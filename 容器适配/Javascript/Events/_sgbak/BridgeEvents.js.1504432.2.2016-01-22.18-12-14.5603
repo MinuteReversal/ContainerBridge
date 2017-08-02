@@ -1,0 +1,10 @@
+﻿/**
+ * author : codec007
+ * date   : 20160122
+ */
+
+function ReadyEvent() {
+    
+}
+
+ReadyEvent.prototype = new Event();
