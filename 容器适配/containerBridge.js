@@ -719,9 +719,9 @@ WechatBridge.prototype = Object.create(AjsBridge.prototype);
  * @private
  * @return {void}
  */
-WechatBridge.prototype._onWechatReady = function() {
+WechatBridge.prototype._onWechatReady = function () {
     var me = this;
-    wx.ready(function() {
+    wx.ready(function () {
         // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
         me.dispatchEvent(BridgeEventType.ready);
     });
@@ -732,9 +732,9 @@ WechatBridge.prototype._onWechatReady = function() {
  * @private 
  * @returns {void} 
  */
-WechatBridge.prototype._listenWechatError = function() {
+WechatBridge.prototype._listenWechatError = function () {
     var me = this;
-    wx.error(function(res) {
+    wx.error(function (res) {
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
         me.logger.write(JSON.stringify(res));
     });
@@ -918,7 +918,7 @@ RelBridge.prototype.scan = function (scanOptions) {
     var relScanOptions = {
         Needdeal: "0", //0 融e联不处理，1表示处理，默认为0
         success: function (res) {
-            options.complete(res.retMsg.result);//通知订阅用户
+            options.complete(res.errMsg);//通知订阅用户
         }
     };
 

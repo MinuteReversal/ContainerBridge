@@ -1,4 +1,4 @@
-var fs = require('fs');
+﻿var fs = require('fs');
 var UglifyJS = require("C:\\Windows\\System32\\node_modules\\uglify-js");
 
 
@@ -36,7 +36,7 @@ var all = "";
 for (var i = 0, file; file = files[i]; i++) {
     all += fs.readFileSync(file, 'utf8');
 }
-fs.writeFileSync("containerBridge.all.js",all, 'utf8');
+fs.writeFileSync("containerBridge.js",all, 'utf8');
 
 
 //合并且压缩
