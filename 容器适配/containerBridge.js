@@ -836,10 +836,16 @@ function RelBridge() {
     try {
         var script = document.createElement("script");
         script.addEventListener("load", function (e) {
-            if (typeof rel === "undefined") me.logger.write("Not find rel Inerface!");
-            me._listenrelError();
-            me._relReady();
-            me._remoteGetConfig();
+            me.logger.write("script loaded");
+            try {
+                if (typeof rel === "undefined") me.logger.write("Not find rel Inerface!");
+                me._listenrelError();
+                me._relReady();
+                me._remoteGetConfig();
+            }
+            catch (e) {
+                me.logger.write(e.message);
+            }
         });
         document.querySelector("head").appendChild(script);
         script.src = ContainerBridgeConfig.relJsUrl;
@@ -871,6 +877,7 @@ RelBridge.prototype._relReady = function () {
  */
 RelBridge.prototype._listenrelError = function () {
     var me = this;
+    me.logger.write("_listenrelError");
     rel.error(function (res) {
         // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
         me.logger.write(JSON.stringify(res));
@@ -885,8 +892,11 @@ RelBridge.prototype._listenrelError = function () {
  */
 RelBridge.prototype._remoteGetConfig = function () {
     var me = this;
+    me.logger.write("_remoteGetConfig");
+    var url = ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]);
+    me.logger.write(url);
     me.ajax({
-        url: ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]),
+        url: url,
         method: "GET",
         onSuccess: function (data) {
             var remouteConfig = data.result;
@@ -899,6 +909,9 @@ RelBridge.prototype._remoteGetConfig = function () {
             };
             me.logger.write(JSON.stringify(data));
             rel.init(relConfig);
+        },
+        onError: function (xhr) {
+            me.logger.write(JSON.stringify(xhr.responseText));
         }
     });
 };
