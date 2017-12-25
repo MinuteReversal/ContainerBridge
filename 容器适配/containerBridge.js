@@ -62,7 +62,9 @@ ScanOptions.prototype.onComplete = function (resultStr /*扫描结果*/) {
  * @class BridgeLogger
  * @constructor
  */
-function BridgeLogger() { }
+function BridgeLogger() {
+    var me = this;
+}
 
 /**
  * 写日志
@@ -71,9 +73,9 @@ function BridgeLogger() { }
  * @return {void} 
  */
 BridgeLogger.prototype.write = function (text) {
+    var me = this;
     if (ContainerBridgeConfig.debug) {
-        console.log(text);
-        alert(text);
+        prompt("日志信息", text);
     }
 };﻿/**
  * author : codec007
@@ -359,6 +361,7 @@ AjsBridge.prototype.ajax = function (ajaxOptions) {
     try {
         var xhr = new XMLHttpRequest();
         var url = ajaxOptions.url + (settings.cache ? "" : ("&_timestamp=" + Date.now()));
+        me.logger.write("ajaxUrl:" + url);
         xhr.open(settings.method, url);
         xhr.setRequestHeader("Accept", "application/json");
 
@@ -893,27 +896,32 @@ RelBridge.prototype._listenrelError = function () {
 RelBridge.prototype._remoteGetConfig = function () {
     var me = this;
     me.logger.write("_remoteGetConfig");
-    var url = ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]);
-    me.logger.write(url);
-    me.ajax({
-        url: url,
-        method: "GET",
-        onSuccess: function (data) {
-            var remouteConfig = data.result;
-            var relConfig = {
-                debug: ContainerBridgeConfig.debug ? 1 : 0, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                appid: remouteConfig.AppId, // 必填，公众号的唯一标识
-                timestamp: remouteConfig.TimeStamp, // 必填，生成签名的时间戳
-                nonceStr: remouteConfig.Noncestr, // 必填，生成签名的随机串
-                signature: remouteConfig.Signature // 必填，签名，见附录1
-            };
-            me.logger.write(JSON.stringify(data));
-            rel.init(relConfig);
-        },
-        onError: function (xhr) {
-            me.logger.write(JSON.stringify(xhr.responseText));
-        }
-    });
+    try {
+        var url = ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]);
+        me.logger.write(url);
+        me.ajax({
+            url: url,
+            method: "GET",
+            onSuccess: function (data) {
+                var remouteConfig = data.result;
+                var relConfig = {
+                    debug: ContainerBridgeConfig.debug ? 1 : 0, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appid: remouteConfig.AppId,                 // 必填，公众号的唯一标识
+                    timestamp: remouteConfig.TimeStamp,         // 必填，生成签名的时间戳
+                    nonceStr: remouteConfig.Noncestr,           // 必填，生成签名的随机串
+                    signature: remouteConfig.Signature          // 必填，签名，见附录1
+                };
+                me.logger.write(JSON.stringify(data));
+                rel.init(relConfig);
+            },
+            onError: function (xhr) {
+                me.logger.write("onError:" + xhr.status  + xhr.responseText);
+            }
+        });
+    } catch (e) {
+        me.logger.write(e.message);
+    }
+
 };
 
 /**

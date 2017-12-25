@@ -44,5 +44,5 @@
     alipayJsUrl: "http://static.alipay.com/aliBridge/1.0.0/aliBridge.min.js",
     relJsUrl: "https://imapi.icbc.com.cn/icbc/jsrel1.0.6.js",
     relAppID: "",
-    relSignatureApiUrl: "http://u.yibalian.cn/Center/JsApiSignature"
+    relSignatureApiUrl: "http://center.elink.yibalian.cn/api/B2EF3A08C1624FF5A78768DD49461C91/JsApi/Signature"//"http://u.yibalian.cn/Center/JsApiSignature"
 };

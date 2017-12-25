@@ -3,7 +3,9 @@
  * @class BridgeLogger
  * @constructor
  */
-function BridgeLogger() { }
+function BridgeLogger() {
+    var me = this;
+}
 
 /**
  * 写日志
@@ -12,8 +14,8 @@ function BridgeLogger() { }
  * @return {void} 
  */
 BridgeLogger.prototype.write = function (text) {
+    var me = this;
     if (ContainerBridgeConfig.debug) {
-        console.log(text);
-        alert(text);
+        prompt("日志信息", text);
     }
 };

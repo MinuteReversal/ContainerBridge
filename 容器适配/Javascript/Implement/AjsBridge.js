@@ -97,6 +97,7 @@ AjsBridge.prototype.ajax = function (ajaxOptions) {
     try {
         var xhr = new XMLHttpRequest();
         var url = ajaxOptions.url + (settings.cache ? "" : ("&_timestamp=" + Date.now()));
+        me.logger.write("ajaxUrl:" + url);
         xhr.open(settings.method, url);
         xhr.setRequestHeader("Accept", "application/json");
 
