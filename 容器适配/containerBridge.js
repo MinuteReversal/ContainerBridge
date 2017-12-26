@@ -897,10 +897,8 @@ RelBridge.prototype._remoteGetConfig = function () {
     var me = this;
     me.logger.write("_remoteGetConfig");
     try {
-        var url = ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]);
-        me.logger.write(url);
         me.ajax({
-            url: url,
+            url: ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]),
             method: "GET",
             onSuccess: function (data) {
                 var remouteConfig = data;
@@ -921,7 +919,6 @@ RelBridge.prototype._remoteGetConfig = function () {
     } catch (e) {
         me.logger.write(e.message);
     }
-
 };
 
 /**
