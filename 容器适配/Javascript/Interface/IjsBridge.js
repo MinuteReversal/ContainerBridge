@@ -53,6 +53,14 @@ IjsBridge.prototype.removeEventListener = function (type, listener) { throw new 
  */
 IjsBridge.prototype.ajax = function (ajaxOptions) { throw new NotImplementException(); };
 
+
+/**
+*拍照或从手机相册中选图接口
+*/
+IjsBridge.prototype.chooseImage = function () { throw new NotImplementException(); };
+
+
+
 /**
  * 扫描二维码
  * @method scan

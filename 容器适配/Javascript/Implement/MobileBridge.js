@@ -9,7 +9,7 @@
  * @constructor  
  */
 function MobileBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Mobile;
     window.addEventListener("load", function () {
@@ -38,7 +38,7 @@ MobileBridge.prototype._MobileReady = function () {
  * @param {Object} scanOptions
  * @return {void}
  */
-MobileBridge.prototype.scan = function(scanOptions) {
+MobileBridge.prototype.scan = function (scanOptions) {
     var me = this;
     var options = me.extend(me.defaultScanOptions, scanOptions);
     options.complete("Not Implement!");

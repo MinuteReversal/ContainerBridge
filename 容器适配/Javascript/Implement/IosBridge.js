@@ -9,7 +9,7 @@
  * @constructor
  */
 function IosBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.options = null;
     this.ContainerType = ContainerType.iOS;
@@ -50,7 +50,7 @@ function onScanComplete(result) {
  * @throws {ArgumentException}
  * @throws {UnSupportedException}
  */
-IosBridge.prototype.scan = function(scanOptions) {
+IosBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("options");
 
     var me = this;

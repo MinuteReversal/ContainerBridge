@@ -12,7 +12,7 @@
  * @constructor 
  */
 function RelBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Rel;
 
@@ -94,7 +94,7 @@ RelBridge.prototype._remoteGetConfig = function () {
                 rel.init(relConfig);
             },
             onError: function (xhr) {
-                me.logger.write("onError:" + xhr.status  + xhr.responseText);
+                me.logger.write("onError:" + xhr.status + xhr.responseText);
             }
         });
     } catch (e) {

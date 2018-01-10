@@ -1,6 +1,7 @@
 ﻿/**
  * author : codec007
  * date   : 20160122
+ * documents:
  */
 
 /**
@@ -9,7 +10,7 @@
  * @constructor 
  */
 function AlipayBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Alipay;
     me._listenAlipayReady();
@@ -19,7 +20,7 @@ function AlipayBridge() {
     script.addEventListener("load", function (e) {
         if (typeof AlipayJSBridge === "undefined") me.logger.write("not find AlipayJSBridge object!");
     });
-    document.querySelector("head").insertBefore(script,null);
+    document.querySelector("head").insertBefore(script, null);
     script.src = ContainerBridgeConfig.alipayJsUrl;
 }
 
@@ -48,7 +49,7 @@ AlipayBridge.prototype._listenAlipayReady = function () {
  * @return {void} 
  * @throws {ArgumentException}
  */
-AlipayBridge.prototype.scan = function(scanOptions) {
+AlipayBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("scanOptions");
 
     var me = this;
@@ -57,18 +58,18 @@ AlipayBridge.prototype.scan = function(scanOptions) {
     var alipayScanOptions = { type: 'qr' };
 
     switch (options.scanType) {
-    case ScanType.barCode:
-        alipayScanOptions.type = "bar";
-        break;
-    case ScanType.qrCode:
-        alipayScanOptions.type = "qr";
-        break;
-    case ScanType.cardNumber:
-        alipayScanOptions.type = "card";
-        break;
+        case ScanType.barCode:
+            alipayScanOptions.type = "bar";
+            break;
+        case ScanType.qrCode:
+            alipayScanOptions.type = "qr";
+            break;
+        case ScanType.cardNumber:
+            alipayScanOptions.type = "card";
+            break;
     }
 
-    AlipayJSBridge.call('scan', alipayScanOptions, function(result) {
+    AlipayJSBridge.call('scan', alipayScanOptions, function (result) {
         options.complete(result[options.scanType]); //通知用户的订阅
     });
 };

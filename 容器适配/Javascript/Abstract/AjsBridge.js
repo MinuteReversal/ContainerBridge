@@ -11,9 +11,9 @@
  * @constructor
  */
 function AjsBridge() {
-    IjsBridge.call(this);
+    IjsBridge.apply(this, arguments);
     this.appOptions = null;
-    this.version = "1.1";
+    this.version = "1.2";
     this.logger = new BridgeLogger();
     this.Listeners = [];//订阅列表
 }

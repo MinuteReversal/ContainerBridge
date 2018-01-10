@@ -9,7 +9,7 @@
  * @constructor  
  */
 function H5Bridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.PC;
     window.addEventListener("load", function () {
@@ -38,7 +38,7 @@ H5Bridge.prototype._h5Ready = function () {
  * @param {Object} scanOptions
  * @return {void}
  */
-H5Bridge.prototype.scan = function(scanOptions) {
+H5Bridge.prototype.scan = function (scanOptions) {
     var me = this;
     var options = me.extend(me.defaultScanOptions, scanOptions);
     options.complete("Not Implement!");

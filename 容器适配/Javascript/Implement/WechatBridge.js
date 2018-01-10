@@ -1,6 +1,8 @@
 ﻿/**
  * author : codec007
  * date   : 20160122
+ * documents:
+ * https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
  */
 
 /**
@@ -9,7 +11,7 @@
  * @constructor 
  */
 function WechatBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Wechat;
     me.appOptions = new AppOptions(ContainerBridgeConfig.wechatAppID, ContainerBridgeConfig.wechatAppSecret);

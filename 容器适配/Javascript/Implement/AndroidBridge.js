@@ -9,7 +9,7 @@
  * @constructor
  */
 function AndroidBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Android;
     me.options = null;
@@ -20,7 +20,7 @@ function AndroidBridge() {
 /**
  * AndroidBridge inherit AjsBridge
  */
-AndroidBridge.prototype =Object.create(AjsBridge.prototype);
+AndroidBridge.prototype = Object.create(AjsBridge.prototype);
 
 /**
  * @method _andriodReady
@@ -50,7 +50,7 @@ function getQRcodeResult(result) {
  * @throws {ArgumentException}
  * @throws {UnSupportedException}
  */
-AndroidBridge.prototype.scan = function(scanOptions) {
+AndroidBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("options");
 
     var me = this;
