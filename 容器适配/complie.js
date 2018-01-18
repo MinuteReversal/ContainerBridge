@@ -19,7 +19,7 @@ var files = [
     "Javascript/Enumerable/BridgeEnum.js",
     "Javascript/Interface/IjsBridge.js",
     "Javascript/Implement/ListenerItem.js",
-    "Javascript/Implement/AjsBridge.js",
+    "Javascript/Abstract/AjsBridge.js",
     "Javascript/Implement/AlipayBridge.js",
     "Javascript/Implement/AndroidBridge.js",
     "Javascript/Implement/H5Bridge.js",

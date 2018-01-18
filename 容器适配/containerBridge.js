@@ -222,6 +222,14 @@ IjsBridge.prototype.removeEventListener = function (type, listener) { throw new 
  */
 IjsBridge.prototype.ajax = function (ajaxOptions) { throw new NotImplementException(); };
 
+
+/**
+*拍照或从手机相册中选图接口
+*/
+IjsBridge.prototype.chooseImage = function () { throw new NotImplementException(); };
+
+
+
 /**
  * 扫描二维码
  * @method scan
@@ -275,9 +283,9 @@ function ListenerItem(type, listener) {
  * @constructor
  */
 function AjsBridge() {
-    IjsBridge.call(this);
+    IjsBridge.apply(this, arguments);
     this.appOptions = null;
-    this.version = "1.1";
+    this.version = "1.2";
     this.logger = new BridgeLogger();
     this.Listeners = [];//订阅列表
 }
@@ -441,6 +449,7 @@ AjsBridge.prototype.defaultShareOptions = {
 };﻿/**
  * author : codec007
  * date   : 20160122
+ * documents:
  */
 
 /**
@@ -449,7 +458,7 @@ AjsBridge.prototype.defaultShareOptions = {
  * @constructor 
  */
 function AlipayBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Alipay;
     me._listenAlipayReady();
@@ -459,7 +468,7 @@ function AlipayBridge() {
     script.addEventListener("load", function (e) {
         if (typeof AlipayJSBridge === "undefined") me.logger.write("not find AlipayJSBridge object!");
     });
-    document.querySelector("head").insertBefore(script,null);
+    document.querySelector("head").insertBefore(script, null);
     script.src = ContainerBridgeConfig.alipayJsUrl;
 }
 
@@ -488,7 +497,7 @@ AlipayBridge.prototype._listenAlipayReady = function () {
  * @return {void} 
  * @throws {ArgumentException}
  */
-AlipayBridge.prototype.scan = function(scanOptions) {
+AlipayBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("scanOptions");
 
     var me = this;
@@ -497,18 +506,18 @@ AlipayBridge.prototype.scan = function(scanOptions) {
     var alipayScanOptions = { type: 'qr' };
 
     switch (options.scanType) {
-    case ScanType.barCode:
-        alipayScanOptions.type = "bar";
-        break;
-    case ScanType.qrCode:
-        alipayScanOptions.type = "qr";
-        break;
-    case ScanType.cardNumber:
-        alipayScanOptions.type = "card";
-        break;
+        case ScanType.barCode:
+            alipayScanOptions.type = "bar";
+            break;
+        case ScanType.qrCode:
+            alipayScanOptions.type = "qr";
+            break;
+        case ScanType.cardNumber:
+            alipayScanOptions.type = "card";
+            break;
     }
 
-    AlipayJSBridge.call('scan', alipayScanOptions, function(result) {
+    AlipayJSBridge.call('scan', alipayScanOptions, function (result) {
         options.complete(result[options.scanType]); //通知用户的订阅
     });
 };
@@ -523,7 +532,7 @@ AlipayBridge.prototype.scan = function(scanOptions) {
  * @constructor
  */
 function AndroidBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Android;
     me.options = null;
@@ -534,7 +543,7 @@ function AndroidBridge() {
 /**
  * AndroidBridge inherit AjsBridge
  */
-AndroidBridge.prototype =Object.create(AjsBridge.prototype);
+AndroidBridge.prototype = Object.create(AjsBridge.prototype);
 
 /**
  * @method _andriodReady
@@ -564,7 +573,7 @@ function getQRcodeResult(result) {
  * @throws {ArgumentException}
  * @throws {UnSupportedException}
  */
-AndroidBridge.prototype.scan = function(scanOptions) {
+AndroidBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("options");
 
     var me = this;
@@ -586,7 +595,7 @@ AndroidBridge.prototype.scan = function(scanOptions) {
  * @constructor  
  */
 function H5Bridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.PC;
     window.addEventListener("load", function () {
@@ -615,7 +624,7 @@ H5Bridge.prototype._h5Ready = function () {
  * @param {Object} scanOptions
  * @return {void}
  */
-H5Bridge.prototype.scan = function(scanOptions) {
+H5Bridge.prototype.scan = function (scanOptions) {
     var me = this;
     var options = me.extend(me.defaultScanOptions, scanOptions);
     options.complete("Not Implement!");
@@ -630,7 +639,7 @@ H5Bridge.prototype.scan = function(scanOptions) {
  * @constructor
  */
 function IosBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.options = null;
     this.ContainerType = ContainerType.iOS;
@@ -671,7 +680,7 @@ function onScanComplete(result) {
  * @throws {ArgumentException}
  * @throws {UnSupportedException}
  */
-IosBridge.prototype.scan = function(scanOptions) {
+IosBridge.prototype.scan = function (scanOptions) {
     if (!scanOptions) throw new ArgumentException("options");
 
     var me = this;
@@ -685,6 +694,8 @@ IosBridge.prototype.scan = function(scanOptions) {
 };﻿/**
  * author : codec007
  * date   : 20160122
+ * documents:
+ * https://mp.weixin.qq.com/wiki?t=resource/res_main&id=mp1421141115
  */
 
 /**
@@ -693,7 +704,7 @@ IosBridge.prototype.scan = function(scanOptions) {
  * @constructor 
  */
 function WechatBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Wechat;
     me.appOptions = new AppOptions(ContainerBridgeConfig.wechatAppID, ContainerBridgeConfig.wechatAppSecret);
@@ -831,7 +842,7 @@ WechatBridge.prototype.setAppOptions = function (appOptions) {
  * @constructor 
  */
 function RelBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Rel;
 
@@ -913,7 +924,7 @@ RelBridge.prototype._remoteGetConfig = function () {
                 rel.init(relConfig);
             },
             onError: function (xhr) {
-                me.logger.write("onError:" + xhr.status  + xhr.responseText);
+                me.logger.write("onError:" + xhr.status + xhr.responseText);
             }
         });
     } catch (e) {
@@ -1004,7 +1015,7 @@ RelBridge.prototype.pay = function (payOptions) {
  * @constructor  
  */
 function MobileBridge() {
-    AjsBridge.call(this);
+    AjsBridge.apply(this, arguments);
     var me = this;
     me.ContainerType = ContainerType.Mobile;
     window.addEventListener("load", function () {
@@ -1033,7 +1044,7 @@ MobileBridge.prototype._MobileReady = function () {
  * @param {Object} scanOptions
  * @return {void}
  */
-MobileBridge.prototype.scan = function(scanOptions) {
+MobileBridge.prototype.scan = function (scanOptions) {
     var me = this;
     var options = me.extend(me.defaultScanOptions, scanOptions);
     options.complete("Not Implement!");
