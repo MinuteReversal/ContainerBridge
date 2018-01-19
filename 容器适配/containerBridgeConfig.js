@@ -2,8 +2,8 @@
     debug: true,
     wechatJsUrl: "http://res.wx.qq.com/open/js/jweixin-1.2.0.js",
     wechatSignatureApiUrl: "http://mp.caiyunlife.com/wechat/AdvanceApi/JsApiSignature",
-    wechatAppID: "wxaa3ce740e41cf90f",
-    wechatAppSecret: "4a77817827222a619eb788e1bd794eb5",
+    wechatAppID: "wx1fed040d52138883",
+    wechatAppSecret: "4123a53c249d041901c2c4a85e188fb0",
     wechatAPIList: [
         "onMenuShareTimeline",
         "onMenuShareAppMessage",
