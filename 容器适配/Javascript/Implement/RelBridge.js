@@ -82,13 +82,13 @@ RelBridge.prototype._remoteGetConfig = function () {
             url: ContainerBridgeConfig.relSignatureApiUrl + "?url=" + encodeURIComponent(location.href.split("#")[0]),
             method: "GET",
             onSuccess: function (data) {
-                var remouteConfig = data;
+                var remoteConfig = data;
                 var relConfig = {
                     debug: ContainerBridgeConfig.debug ? 1 : 0, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                    appid: remouteConfig.AppId,                 // 必填，公众号的唯一标识
-                    timestamp: remouteConfig.TimeStamp,         // 必填，生成签名的时间戳
-                    nonceStr: remouteConfig.Noncestr,           // 必填，生成签名的随机串
-                    signature: remouteConfig.Signature          // 必填，签名，见附录1
+                    appid: remoteConfig.AppId,                 // 必填，公众号的唯一标识
+                    timestamp: remoteConfig.TimeStamp,         // 必填，生成签名的时间戳
+                    nonceStr: remoteConfig.Noncestr,           // 必填，生成签名的随机串
+                    signature: remoteConfig.Signature          // 必填，签名，见附录1
                 };
                 me.logger.write(JSON.stringify(data));
                 rel.init(relConfig);

@@ -73,13 +73,13 @@ WechatBridge.prototype._remoteGetConfig = function () {
         url: ContainerBridgeConfig.wechatSignatureApiUrl + "?appid=" + me.appOptions.appId + "&secret=" + me.appOptions.appSecret + "&url=" + encodeURIComponent(location.href.split("#")[0]),
         method: "GET",
         onSuccess: function (result) {
-            var remouteConfig = result;
+            var remoteConfig = result;
             var wxConfig = {
                 debug: ContainerBridgeConfig.debug, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-                appId: remouteConfig.AppId, // 必填，公众号的唯一标识
-                timestamp: remouteConfig.TimeStamp, // 必填，生成签名的时间戳
-                nonceStr: remouteConfig.Noncestr, // 必填，生成签名的随机串
-                signature: remouteConfig.Signature, // 必填，签名，见附录1
+                appId: remoteConfig.AppId, // 必填，公众号的唯一标识
+                timestamp: remoteConfig.TimeStamp, // 必填，生成签名的时间戳
+                nonceStr: remoteConfig.Noncestr, // 必填，生成签名的随机串
+                signature: remoteConfig.Signature, // 必填，签名，见附录1
                 jsApiList: ContainerBridgeConfig.wechatAPIList // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
             };
             me.logger.write(JSON.stringify(wxConfig));
