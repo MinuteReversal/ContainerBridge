@@ -1,11 +1,11 @@
 ﻿var fs = require('fs');
 var UglifyJS = require("C:\\Windows\\System32\\node_modules\\uglify-js");
-
+const time = `/*${new Date().toUTCString()}*/\r\n`;
 
 // 批量读取文件，压缩之
 function buildOne(fileIn, fileOut) {
     var result = UglifyJS.minify(fileIn);
-    fs.writeFileSync(fileOut, result.code, 'utf8');
+    fs.writeFileSync(fileOut,time.concat(result.code), 'utf8');
 }
 
 var files = [
@@ -32,7 +32,7 @@ var files = [
 
 
 //合并为一个文件
-var all = "";
+var all = time;
 for (var i = 0, file; file = files[i]; i++) {
     all += fs.readFileSync(file, 'utf8');
 }

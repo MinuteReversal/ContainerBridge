@@ -1,3 +1,4 @@
+/*Mon, 22 Jan 2018 03:19:39 GMT*/
 ﻿/**
  * Asynchronous Javascript And XML
  * @class AjaxOptions
