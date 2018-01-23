@@ -70,7 +70,7 @@ WechatBridge.prototype._listenWechatError = function () {
 WechatBridge.prototype._remoteGetConfig = function () {
     var me = this;
     me.ajax({
-        url: ContainerBridgeConfig.wechatSignatureApiUrl + "?appid=" + me.appOptions.appId + "&secret=" + me.appOptions.appSecret + "&url=" + encodeURIComponent(location.href.split("#")[0]),
+        url: ContainerBridgeConfig.wechatSignatureApiUrl + "?appid=" + me.appOptions.appId + "&secret=" + me.appOptions.appSecret + "&url=" + encodeURIComponent(location.href.split("#")[0]) + "&_t=" + Date.now(),
         method: "GET",
         onSuccess: function (result) {
             var remoteConfig = result;

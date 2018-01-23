@@ -1,4 +1,4 @@
-/*Mon, 22 Jan 2018 03:19:39 GMT*/
+/*Tue, 23 Jan 2018 03:44:14 GMT*/
 ﻿/**
  * Asynchronous Javascript And XML
  * @class AjaxOptions
@@ -764,7 +764,7 @@ WechatBridge.prototype._listenWechatError = function () {
 WechatBridge.prototype._remoteGetConfig = function () {
     var me = this;
     me.ajax({
-        url: ContainerBridgeConfig.wechatSignatureApiUrl + "?appid=" + me.appOptions.appId + "&secret=" + me.appOptions.appSecret + "&url=" + encodeURIComponent(location.href.split("#")[0]),
+        url: ContainerBridgeConfig.wechatSignatureApiUrl + "?appid=" + me.appOptions.appId + "&secret=" + me.appOptions.appSecret + "&url=" + encodeURIComponent(location.href.split("#")[0]) + "&_t=" + Date.now(),
         method: "GET",
         onSuccess: function (result) {
             var remoteConfig = result;
